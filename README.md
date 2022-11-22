@@ -1,5 +1,7 @@
 [![Board Status](https://dev.azure.com/jhelin0133/9cea0cf5-594b-4ce1-af07-1a73f1d35607/f3e27d6b-1b3b-4b1e-9fff-5112a09d0d8f/_apis/work/boardbadge/55904251-54b0-4cd8-940a-adb720234ca2?columnOptions=1)](https://dev.azure.com/jhelin0133/9cea0cf5-594b-4ce1-af07-1a73f1d35607/_boards/board/t/f3e27d6b-1b3b-4b1e-9fff-5112a09d0d8f/Microsoft.RequirementCategory/)
 
+![apa](https://dev.azure.com/jhelin0133/9cea0cf5-594b-4ce1-af07-1a73f1d35607/f3e27d6b-1b3b-4b1e-9fff-5112a09d0d8f/_apis/work/boardbadge/55904251-54b0-4cd8-940a-adb720234ca2?columnOptions=1)
+
 # Hands-on with Container Apps
 
 The purpose of this repo is to help you quickly get hands-on with Container Apps. It is meant to be consumed either through _GitHub Codespaces_ or through a local _Development Container (dev container)_. The idea being that everything you need from tooling to runtimes is already included in the dev container so it should be as simple as executing a run command!

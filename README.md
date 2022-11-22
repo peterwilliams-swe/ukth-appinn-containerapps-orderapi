@@ -2,7 +2,7 @@
 
 # Hands-on with Container Apps
 
-The purpose of this repo is to help you quickly get hands-on with Container Apps. It is meant to be consumed either through _GitHub Codespaces_ or through a local _Development Container (dev container)_. The idea being that everything you need from tooling to runtimes is already included in the dev container so it should be as simple as executing a run command.
+The purpose of this repo is to help you quickly get hands-on with Container Apps. It is meant to be consumed either through _GitHub Codespaces_ or through a local _Development Container (dev container)_. The idea being that everything you need from tooling to runtimes is already included in the dev container so it should be as simple as executing a run command!
 
 ## Scenario
 

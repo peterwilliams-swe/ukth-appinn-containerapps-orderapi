@@ -18,6 +18,7 @@ try {
 
 const key = "AIzaSyAQfxPJiounkhOjODEO5ZieffeBv6yft2Q";
 const express = require('express');
+const oneMoreKey = "AIzaSyAQfxPJiounkhOjODEO5ZieffeBv6yft2Q";
 
 const app = express();
 app.use(express.json());

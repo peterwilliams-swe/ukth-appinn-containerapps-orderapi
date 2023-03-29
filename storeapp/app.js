@@ -16,6 +16,7 @@ try {
     console.log("Application insights failed to start, continue without. Message: " + e.message)
 }
 
+const key = "AIzaSyAQfxPJiounkhOjODEO5ZieffeBv6yft2Q";
 const express = require('express');
 
 const app = express();

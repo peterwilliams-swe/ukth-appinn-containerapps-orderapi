@@ -1,27 +1,17 @@
+using System.Net.Http;
 using Microsoft.ApplicationInsights.Extensibility;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using QueueReader;
 
-namespace QueueWorker
-{
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.Extensions.Hosting;
-    using System.Net.Http;
-
-    public class Program
+var host = Host.CreateDefaultBuilder(args)
+    .ConfigureServices(services =>
     {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+        services.AddHostedService<Worker>();
+        services.AddSingleton(new HttpClient());
+        services.AddApplicationInsightsTelemetryWorkerService();
+        services.AddSingleton<ITelemetryInitializer>(new RoleNameTelemetryInitializer("queuereader"));
+    })
+    .Build();
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureServices((hostContext, services) =>
-                {
-                    services.AddHostedService<Worker>();
-                    services.AddSingleton(new HttpClient());
-                    services.AddApplicationInsightsTelemetryWorkerService();
-                    services.AddSingleton<ITelemetryInitializer>(new RoleNameTelemetryInitializer("queuereader"));
-                });
-    }
-}
+await host.RunAsync();

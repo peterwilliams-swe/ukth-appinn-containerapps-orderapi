@@ -21,7 +21,6 @@ The following image illustrates the steps in this challenge
 ## Activities
 - Create a fork of this repository
 - Clone the repository in a development environment
-- Install the _hey_ load testing tool (_not required for codespaces or devcontainer_)
 - Install Azure CLI extension for Container Apps (_not required for codespaces or devcontainer_)
 - Log in to Azure
 - Create a resource group with the naming convention "[seven letters]-rg" in an Azure region of choice 
@@ -35,7 +34,6 @@ The following image illustrates the steps in this challenge
 - [Azure PowerShell Documentation (learn.microsoft.com)](https://learn.microsoft.com/en-us/powershell/azure/?view=azps-8.3.0)
 - [Azure Command-Line Interface (CLI) documentation (learn.microsoft.com)](https://learn.microsoft.com/en-us/cli/azure/)
 - [Fork a repo (github.com)](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
-- [hey (github.com)](https://github.com/rakyll/hey)
 - [az containerapp (learn.microsoft.com)](https://learn.microsoft.com/en-us/cli/azure/containerapp?view=azure-cli-latest)
 - [New-AzResourceGroup (learn.microsoft.com)](https://learn.microsoft.com/en-us/powershell/module/az.resources/new-azresourcegroup?view=azps-8.3.0)
 - [az group create (learn.microsoft.com)](https://learn.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-create)

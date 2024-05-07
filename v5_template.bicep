@@ -16,17 +16,17 @@ var gatewayTokenSecretName = 'gateway-token'
 
 
 // ContainerAppsEnvironment
-resource containerAppsEnv 'Microsoft.App/managedEnvironments@2022-03-01' existing = { 
+resource containerAppsEnv 'Microsoft.App/managedEnvironments@2023-05-01' existing = { 
   name: containerAppsEnvName
 }
 
 // Api Management
-resource apim 'Microsoft.ApiManagement/service@2021-08-01' existing =  { 
+resource apim 'Microsoft.ApiManagement/service@2022-08-01' existing =  { 
   name: apiManagementName
 }
 
 // StorageAccount
-resource stg 'Microsoft.Storage/storageAccounts@2021-01-01' existing =  { 
+resource stg 'Microsoft.Storage/storageAccounts@2023-01-01' existing =  { 
   name: storageAccountName
 }
 
@@ -35,7 +35,7 @@ resource AppInsights_Name_resource 'Microsoft.Insights/components@2020-02-02' ex
 }
 
 // APIM Self hosted gateway (SHGW) 
-resource apiGatewayContainerApp 'Microsoft.App/containerApps@2022-03-01' = {
+resource apiGatewayContainerApp 'Microsoft.App/containerApps@2023-05-01' = {
   name: apiGatewayContainerAppName
   location: location
   properties: {
@@ -59,7 +59,7 @@ resource apiGatewayContainerApp 'Microsoft.App/containerApps@2022-03-01' = {
     template: {
       containers: [
         {
-          image: 'mcr.microsoft.com/azure-api-management/gateway:2.0.2'
+          image: 'mcr.microsoft.com/azure-api-management/gateway:v2'
           name: 'apim-gateway'
           resources: {
             cpu: '0.5'
@@ -97,7 +97,7 @@ resource apiGatewayContainerApp 'Microsoft.App/containerApps@2022-03-01' = {
 
 
 // Internal httpapi  
-resource httpapi 'Microsoft.App/containerApps@2022-03-01' = {
+resource httpapi 'Microsoft.App/containerApps@2023-05-01' = {
   name: 'httpapi2'
   location: location
   properties: {
@@ -159,8 +159,9 @@ resource httpapi 'Microsoft.App/containerApps@2022-03-01' = {
 
 
 // Api in APIM 
-resource apimApi 'Microsoft.ApiManagement/service/apis@2021-08-01' = {
-  name: '${apiManagementName}/httpapi2'
+resource apimApi 'Microsoft.ApiManagement/service/apis@2022-08-01' = {
+  name: 'httpapi2'
+  parent: apim
   properties: {
     path: '/api'
     apiType: 'http'
@@ -182,7 +183,7 @@ resource apimApi 'Microsoft.ApiManagement/service/apis@2021-08-01' = {
 }
 
 // Operation for API in APIM
-resource apiOperation 'Microsoft.ApiManagement/service/apis/operations@2021-08-01' = {
+resource apiOperation 'Microsoft.ApiManagement/service/apis/operations@2022-08-01' = {
   name: 'AddItems'
   parent: apimApi
   properties: {
@@ -203,7 +204,7 @@ resource apiOperation 'Microsoft.ApiManagement/service/apis/operations@2021-08-0
 }
 
 // Expose API in SHGW
-resource exposeApiOnGateway 'Microsoft.ApiManagement/service/gateways/apis@2021-08-01' = {
+resource exposeApiOnGateway 'Microsoft.ApiManagement/service/gateways/apis@2022-08-01' = {
   name: '${apiManagementName}/${selfHostedGatewayName}/httpapi2'
   properties: {}
   dependsOn: [

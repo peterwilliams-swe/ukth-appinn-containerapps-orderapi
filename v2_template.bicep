@@ -8,12 +8,8 @@ param ContainerApps_HttpApi_NewRevisionName string
 
 var StorageAccount_ApiVersion = '2018-07-01'
 var StorageAccount_Queue_Name = 'demoqueue'
-var Workspace_Resource_Id = LogAnalytics_Workspace_Name_resource.id
 
-
-
-
-resource StorageAccount_Name_resource 'Microsoft.Storage/storageAccounts@2021-01-01' = {
+resource StorageAccount_Name_resource 'Microsoft.Storage/storageAccounts@2023-01-01' = {
   name: '${StorageAccount_prefix}${uniqueString(resourceGroup().id)}'
   location: Location
   sku: {
@@ -39,11 +35,6 @@ resource LogAnalytics_Workspace_Name_resource 'Microsoft.OperationalInsights/wor
       name: 'PerGB2018'
     }
     retentionInDays: 30
-    features: {
-      searchVersion: 1
-      legacy: 0
-      enableLogAccessUsingOnlyResourcePermissions: true
-    }
   }
 }
 resource AppInsights_Name_resource 'Microsoft.Insights/components@2020-02-02' = {
@@ -52,8 +43,6 @@ resource AppInsights_Name_resource 'Microsoft.Insights/components@2020-02-02' = 
   location: Location
   properties: {
     Application_Type: 'web'
-    Flow_Type: 'Redfield'
-    Request_Source: 'CustomDeployment'
     WorkspaceResourceId: LogAnalytics_Workspace_Name_resource.id
   }
 }
@@ -67,7 +56,7 @@ resource ContainerApps_Environment_Name_resource 'Microsoft.App/managedEnvironme
       destination: 'log-analytics'
       logAnalyticsConfiguration: {
         customerId: LogAnalytics_Workspace_Name_resource.properties.customerId
-        sharedKey: listKeys(Workspace_Resource_Id, '2015-03-20').primarySharedKey
+        sharedKey: LogAnalytics_Workspace_Name_resource.listKeys().primarySharedKey
       }
     }
     
@@ -87,7 +76,7 @@ resource queuereader 'Microsoft.App/containerApps@2022-03-01' = {
       secrets: [
         {
           name: 'queueconnection'
-          value: 'DefaultEndpointsProtocol=https;AccountName=${StorageAccount_Name_resource.name};AccountKey=${listKeys(StorageAccount_Name_resource.id, StorageAccount_ApiVersion).keys[0].value};EndpointSuffix=core.windows.net'      
+          value: 'DefaultEndpointsProtocol=https;AccountName=${StorageAccount_Name_resource.name};AccountKey=${StorageAccount_Name_resource.listKeys().keys[0].value};EndpointSuffix=core.windows.net'      
         }
       ]
       dapr: {

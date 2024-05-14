@@ -367,7 +367,7 @@ a2be1546-7290-49df-9f1b-9dd567b7ce3b f5a52f7a-67db-4ada-bdab-baa8189af700
 
 Ok, that's some progress but not the messages we sent in the query string. 
 
-Let's take a look at the application code:
+Let's take a look at the application code of the _HTTP API_:
 
 [Program.cs](httapiapp\Program.cs)
 ```c#

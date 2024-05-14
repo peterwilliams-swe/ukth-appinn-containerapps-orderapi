@@ -34,7 +34,7 @@ Once this lab is completed you should have an Architecture that looks something 
 - A GitHub account
 - An Azure Subscription
 - License for using GitHub Codespaces (if you want use Codespaces as a development environment)
-
+- License for GitHub Copilot (optional but is of great help to solve the challenges)
 
 ## Structure
 The hackathon is divided into seven challenges. Each challenge consist of the following structure: 

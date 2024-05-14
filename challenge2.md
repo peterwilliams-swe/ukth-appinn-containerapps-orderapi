@@ -6,9 +6,9 @@ The following image illustrates the steps in this challenge
 ![](images/challenge-2-overview.png)
 
 
-> **Note**<br>
-> There is currently a soft limit of maximum 5 Container Apps Environments per subscription per region.
-> If you are more than five lab participants using the same subscription you need to select different locations to avoid hitting the limit.
+> [!NOTE]
+> There is currently a soft limit of maximum 15 Container Apps Environments per subscription per region.
+> If you are more than 15 lab participants using the same subscription you need to select different locations to avoid hitting the limit.
 
 
 ## Main objectives

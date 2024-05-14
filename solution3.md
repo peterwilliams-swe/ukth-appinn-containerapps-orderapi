@@ -119,7 +119,7 @@ a2be1546-7290-49df-9f1b-9dd567b7ce3b f5a52f7a-67db-4ada-bdab-baa8189af700--item3
 <br>
 
 
-> **Note**<br> 
+> [!NOTE] 
 > The traffic split is 80/20 (80% old api, 20 % new api), so you might need to send a few messages before it hits our new revision of httpapi and appends the provided string to the message.
 
 That's looking better. We can still see the original message, but we can also now see our "item3" message with the date and time appended to it.

@@ -23,7 +23,16 @@ The following image illustrates the steps in this challenge
 - Clone the repository in a development environment
 - Install Azure CLI extension for Container Apps (_not required for codespaces or devcontainer_)
 - Log in to Azure
-- Create a resource group with the naming convention "[seven letters]-rg" in an Azure region of choice 
+- Create a resource group with the naming convention "[seven letters]-rg" in an Azure region of choice
+
+> [!NOTE]  
+> If your GitHub account is part of an organization there is a limitation that only one fork is possible in the same organization. The workaround is to clone this repo, create a new repository and then push the code from the cloned working copy.
+
+> [!TIP]  
+> If you have GitHub Copilot you can ask for help on cloning an existing repo into a new repo.
+> Example of a question to ask:
+> - *How do I clone an existing GitHub repository and push it to a new?*
+
 
 ## Definition of done
 - Repository forked to your GitHub account

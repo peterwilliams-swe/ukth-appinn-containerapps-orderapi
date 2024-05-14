@@ -17,9 +17,13 @@
 			// Set *default* container specific settings.json values on container create.
 			"settings": {},
 			"extensions": [
-				"ms-dotnettools.csharp",
-				"ms-azuretools.vscode-bicep",		
-				"davidanson.vscode-markdownlint"]
+			        "ms-vscode.live-server",
+			        "ms-dotnettools.vscode-dotnet-runtime",
+        			"ms-dotnettools.csdevkit",
+			        "GitHub.copilot-chat",
+       				"GitHub.copilot",
+				"ms-azuretools.vscode-bicep"
+			]
 		}
 	},
 

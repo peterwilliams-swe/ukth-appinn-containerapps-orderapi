@@ -22,15 +22,13 @@ The solution instructions include examples of both Bash and PowerShell. For mana
 
 ![](images/fork.png)
 
-> **Note**<br>
+> [!NOTE]  
 > If your GitHub account is part of an organization there is a limitation that only one fork is possible in the same organization. The workaround is to clone this repo, create a new repository and then push the code from the cloned working copy similar to this:
->
 >  ``` bash
 >  git clone https://github.com/pewill-msft/ukth-appinn-containerapps-orderapi
 >  cd ukth-appinn-containerapps-orderapi
 >  git remote set-url origin <url of your new repo>
->  git push origin master
->  
+>  git push origin main
 >  ```
 
 ### Clone the respository

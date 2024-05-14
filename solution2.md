@@ -68,10 +68,15 @@ New-AzResourceGroupDeployment -ResourceGroupName $resourceGroup -Name 'v1_deploy
 
 The deployment typically takes around 3 to 5 minutes to complete.
 
-Once deployment has completed, verify the resources created by navigating to [Azure Portal](https://portal.azure.com). The following resources should be created. Note that the resource name prefix will differ in your environment.
+Once deployment has completed, verify the resources created by navigating to [Azure Portal](https://portal.azure.com). The following resources should be created. 
+
 ![](images/resources.png)
+> [!NOTE]
+> The resource name prefix will differ in your environment.
+>
 
 Select the Container Apps Environment and review the apps listed in the Apps blade
+
 ![](images/containerapps.png)
 
 
@@ -400,7 +405,7 @@ public async Task<bool> SendMessage(string message) => await SendMessageToQueue(
 ```
 After we talked to the developer, we discovered that this has already been fixed and it has been pushed as an *v2* version of the *httpapi*. 
 
-> **Note**<br>
+> [!NOTE]
 > You don't need to do the code change - it has already been done by a developer.
 
 But maybe we should be cautious and make sure this new change is working as expected and therefore perform a controlled rollout of the new version so only a subset of the incoming requests hit the new version.

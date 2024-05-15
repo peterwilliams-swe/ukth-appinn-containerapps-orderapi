@@ -1,3 +1,4 @@
+
 # Challenge 5: Solution
 
 ## Solution steps
@@ -201,7 +202,7 @@ az containerapp github-action add \
 
 The command will create a GitHub Action and run it, it takes a couple of minutes, please check the status at _github.com --> Actions_ and see the progress of the GitHub Action after it has been created by the Azure CLI command.
 
-Dive into the logs and locate the _latestRevisionName_, then go to the Azure portal and verify that the revision name is the same for the _queuereader_ Container App.
+Go to the Azure portal under _Revisions and replicas_ and verify that the revision name and date is updated for the _queuereader_ Container App.
 
 ![ghaction1](images/ghaction1.png)
 

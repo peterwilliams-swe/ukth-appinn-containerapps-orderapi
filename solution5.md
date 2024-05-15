@@ -6,12 +6,12 @@ We are now going to use a Azure CLI command to create a GitHub Action that build
 
 First, we need to create a service principal that can be used from the GitHub action to deploy the changes we are introducing.
 
-> **Note**<br> 
-> If you are not able to create a service principal in the Azure Active Directory that is connected to your subscription, you will unfortunately not be able to do this part of the lab
+> [!NOTE] 
+> If you are not able to create a service principal in Microsoft Entra ID that is connected to your subscription, you will unfortunately not be able to do this part of the lab. You can also leverage a pre-created service principal. In many enterprises there is a separate procedure to order a service principal that you need to follow.
 
 
 
-### Create an Azure AD service principal
+### Create a Microsoft Entra ID service principal
 <details>
   <summary>Azure CLI using Bash</summary>
 

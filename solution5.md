@@ -90,7 +90,7 @@ $ghToken=[Replace with the PAT]
 Set the "repoUrl" variable, replace <OWNER> with the GitHub account name. 
 
 ```PowerShell
-$repoUrl="https://github.com/<OWNER>/ukth-appinn-containerapps-orderapi"
+$repoUrl="https://github.com/<your repo url path>"
 
 ```
 

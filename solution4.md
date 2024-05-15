@@ -128,7 +128,7 @@ cd scripts
 ./appwatch.sh $resourceGroup $dataURL
 ```
 
-> **Note**<br>
+> [!NOTE]
 > When running the dev container locally it is a risk that the appwatch script has wrong line-endings. Run the following command to fix the issue.
 
 > ```bash

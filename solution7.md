@@ -1,9 +1,9 @@
 # Challenge 7: Solution
 
 ## Solution steps
-We will nable Azure AD authentication for _Dashboard App_ Container App using Azure Portal.
+We will enable Microsoft Entra ID authentication for _Dashboard App_ Container App using Azure Portal.
 
-### Enable Azure AD authentication
+### Enable Microsoft Entra ID authentication
 Navigate to the Container Dashboard App in [Azure Portal](https://portal.azure.com) and select the _Authentication_ blade.
 
 ![](/images/easyauth-authentication.png)
@@ -12,7 +12,7 @@ Select _Add Identity provider_ and select _Microsoft_ as the identity provider
 
 ![](/images/easyauth-identityprovider.png)
 
-> **Note**<br>
+> [!NOTE]
 > Review the extensive list of identity provider options available
 
 In the _Add identity provider_ page change the name of the identity provider to be prefixed with the unique name generated earlier in the lab (stored in variable `$name`)
@@ -78,7 +78,7 @@ Accept the consent and you will be redirected to the _Dashboard App_
 ![](/images/easyauth-dashboardapp.png)
 
 
-You have now enabled Azure AD authentication for  _Dashboard App_ Container App.
+You have now enabled Microsoft Entra ID authentication for  _Dashboard App_ Container App.
 
 This concludes the series of challenge. You can follow the instructions in [Clean up](cleanup.md) to remove Azure resources created in this hackaton.
 

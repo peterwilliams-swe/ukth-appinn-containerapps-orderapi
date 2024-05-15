@@ -15,7 +15,7 @@ The following image illustrates the steps in this challenge
 
 
 ## Activities
-- Create an Azure AD service principal with contributor permissions on your resource group 
+- Create a Microsoft Entra ID service principal with contributor permissions on your resource group 
 - Create a _Personal Access Token (PAT)_ in GitHub with permissions to your repository and GitHub actions
 - Add a _GitHub Actions_ workflow to your repository to deploy a container app
 - Do a code change in _Queue Reader_ app and push changes to GitHub repository
@@ -25,7 +25,7 @@ The following image illustrates the steps in this challenge
 
 
 ## Definition of done
-- Created an Azure AD service principal and assigned it _contributor_ access on your resource group 
+- Created a Microsoft Entra ID service principal and assigned it _contributor_ access on your resource group 
 - Created a _Personal Access Token (PAT)_ in GitHub with _repo_ and _workflows_ permissions
 - Created a GitHub Actions workflow in your repository to deploy a container app
 - Changed the C# code in _Queue Reader_ app to write a custom log message

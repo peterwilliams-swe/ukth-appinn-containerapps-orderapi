@@ -208,8 +208,6 @@ Go to the Azure portal under _Revisions and replicas_ and verify that the revisi
 
 ![ghaction2](images/ghaction2.png)
 
-![revision](images/revision.png)
-
 
 ### Do a code change in QueueReader App and push changes to GitHub repository
 Now it’s time to do a code change and validate that it has been deployed.

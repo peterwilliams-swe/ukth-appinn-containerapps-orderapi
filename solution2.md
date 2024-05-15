@@ -44,6 +44,9 @@ az deployment group create \
   </summary>
 </details>
 
+> [!NOTE]
+> There might be some warnings of unused variables and syntax during the deployment. You can safely ignore those warnings for now.
+
 <details>
   <summary>PowerShell</summary>
 

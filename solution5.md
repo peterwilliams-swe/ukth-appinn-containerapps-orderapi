@@ -67,6 +67,9 @@ Give the PAT the following scopes:
 
 Click _Generate token_, copy the generated token and assign the variable. 
 
+> [!NOTE]
+> If your repo is part of a GitHub organization with SSO configured you need to configure Single sing-on using the _Configure SSO_ option for the _PAT_ 
+
 <details>
   <summary>Bash</summary>
 
